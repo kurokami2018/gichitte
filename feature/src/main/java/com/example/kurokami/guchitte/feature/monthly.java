@@ -21,6 +21,7 @@ public class monthly{
 
     }
 
+
     void setBottle(list<int> list,int i) {
         if(list[i]==1){
 

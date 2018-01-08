@@ -12,7 +12,6 @@ public class bottleMaker{
             //瓶ができる動画を流す、動画に出でくる瓶の色とcolorNumberが連動
 
 
-
             return colorNumber;
         }
         else{
