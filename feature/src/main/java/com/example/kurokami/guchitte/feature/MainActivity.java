@@ -71,20 +71,20 @@ public class MainActivity extends AppCompatActivity {
         if(colorNumber/=0)this.gruCounter=0;
         else{
             //colorNumberをリストに追加する
-            Gson gson()=new Gson;
+            Gson gson=new Gson();
             String key;String list;
             if(this.month==1){key="jan_data";list="jan";}
-            if(this.month==2){key="feb_data";list="feb"}
-            if(this.month==3){key="mar_data";list="mar"}
-            if(this.month==4){key="apr_data";list="apr"}
-            if(this.month==5){key="may_data";list="may"}
-            if(this.month==6){key="jun_data";list="jun"}
-            if(this.month==7){key="jul_data";list="jul"}
-            if(this.month==8){key="aug_data";list="aug"}
-            if(this.month==9){key="sep_data";list="sep"}
-            if(this.month==10){key="oct_data";list="oct"}
-            if(this.month==11){key="nov_data";list="nov"}
-            if(this.month==12){key="dec_data";list="dec"}
+            if(this.month==2){key="feb_data";list="feb";}
+            if(this.month==3){key="mar_data";list="mar";}
+            if(this.month==4){key="apr_data";list="apr";}
+            if(this.month==5){key="may_data";list="may";}
+            if(this.month==6){key="jun_data";list="jun";}
+            if(this.month==7){key="jul_data";list="jul";}
+            if(this.month==8){key="aug_data";list="aug";}
+            if(this.month==9){key="sep_data";list="sep";}
+            if(this.month==10){key="oct_data";list="oct";}
+            if(this.month==11){key="nov_data";list="nov";}
+            if(this.month==12){key="dec_data";list="dec";}
 
             SharedPreferences sharedPreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
             List list = gson.fromJson(sharedPreferences.getString(key, null), new TypeToken<List>(){}.getType());
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void forBeginner() {
-        boolean before = AppLaunchChecker.hasStartedFromLauncher(getApplicationContext())
+        boolean before = AppLaunchChecker.hasStartedFromLauncher(getApplicationContext());
         AppLaunchChecker.onActivityCreate(this);
         if (before == false) {
             ImageView imageView = new ImageView(this);//表示する場所と思われるthisか？
