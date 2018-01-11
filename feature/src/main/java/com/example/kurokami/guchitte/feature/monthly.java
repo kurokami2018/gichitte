@@ -10,6 +10,7 @@ public class monthly extends MainActivity{
     //スクロールを考慮する必要あり
     //うまくいくなら当月のデータが画面の上端にくるようにするといいと思う
 
+    //activity_main.xml(つぶやき画面)から移動するためのコード
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

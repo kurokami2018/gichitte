@@ -29,12 +29,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //月間画面に移動
-        Button subButton = (Button)findViewById(R.id.subButton);
-        subButton.setOnClickListener(new View.OnClickListener() {
+        Button monthButton = (Button)findViewById(R.id.monthButton);
+        monthButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Sub 画面を起動
                 Intent intent = new Intent();
                 intent.setClassName("com.example.kurokami.guchitte.feature", "com.example.kurokami.guchitte.feature.monthly");
+                startActivity(intent);
+            }
+        });
+
+        Button settingButton = (Button)findViewById(R.id.settingButton);
+        settingButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Sub 画面を起動
+                Intent intent = new Intent();
+                intent.setClassName("com.example.kurokami.guchitte.feature", "com.example.kurokami.guchitte.feature.displaySetting");
                 startActivity(intent);
             }
         });
