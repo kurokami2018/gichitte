@@ -16,12 +16,8 @@ import java.util.Calender; //日付の操作・計算などを扱うクラス
 //→ 前回ログインしたときの月(month)が保存できれば...！！
 
 
-dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.0.0'
-    compile 'com.google.code.gson:gson:2.7' //Gsonライブラリ
-}
+List beforeDate=new ArrayList();
+beforeDate.add(month);
 
 
 
