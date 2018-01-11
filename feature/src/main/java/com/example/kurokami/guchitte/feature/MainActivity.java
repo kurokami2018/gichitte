@@ -1,9 +1,16 @@
 package com.example.kurokami.guchitte.feature;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -20,6 +27,28 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button subButton = (Button)findViewById(R.id.subButton);
+        subButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Sub 画面を起動
+                Intent intent = new Intent();
+                intent.setClassName("com.example.kurokami.guchitte.feature", "com.example.kurokami.guchitte.feature.monthly");
+                startActivity(intent);
+            }
+        });
+
+        Button button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                EditText editText = (EditText) findViewById(R.id.editText);
+                TextView textView = (TextView) findViewById(R.id.textView);
+                AlphaAnimation fadein_image = new AlphaAnimation(0.0f, 1.0f);
+                fadein_image.setDuration(1000);
+                inputMessage.inputMessage(editText,textView);
+            }
+        });
+
     }
 
 

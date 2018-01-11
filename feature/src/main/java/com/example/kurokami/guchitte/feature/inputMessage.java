@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 public class inputMessage extends MainActivity{
 
-    public static void inputMessage(EditText editText, TextView textView, ImageView imageView) {
+    public static void inputMessage(EditText editText, TextView textView) {
         // 入力された文を取得
         String str = editText.getText().toString();
 

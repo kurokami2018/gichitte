@@ -1,12 +1,22 @@
 package com.example.kurokami.guchitte.feature;
 
+import android.os.Bundle;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class monthly{
+public class monthly extends MainActivity{
     //月間画面を表示する。listを12ヶ月分全部受け取ってx,y座標を指定してそこに瓶を貼り付けるプログラム
     //スクロールを考慮する必要あり
     //うまくいくなら当月のデータが画面の上端にくるようにするといいと思う
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_monthly);
+    }
+
+/*
     void tapGetter_S() {//タップされたことを感知して画面を切り替える,月間画面を表示する
         //XMLファイルの設定を呼び出すor画像を表示する
 
@@ -45,5 +55,6 @@ public class monthly{
 
         }
     }
+    */
 }
 
