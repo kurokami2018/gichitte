@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //月間画面に移動
         Button subButton = (Button)findViewById(R.id.subButton);
         subButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //呟く
         Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -50,8 +52,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-
 
 
     public void main( String[] args ){
