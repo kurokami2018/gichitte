@@ -11,26 +11,36 @@ import com.google.gson.reflect.TypeToken;
 import java.util.Calender; //日付の操作・計算などを扱うクラス
 
 
+
+//月(年)が変わった時のデータ取得方法
+//→ 前回ログインしたときの月(month)が保存できれば...！！
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'com.google.code.gson:gson:2.7' //Gsonライブラリ
+}
+
+
+
 public class monthChecker extends AppCompatActivity{
 
   public static void main(String[] args){
+    
   
     //日付取得
-    public int getCalender
+    public int getCalender(){
       Calender cal = Calender.getInstance(); //カレンダーオブジェクトを生成
       //System.out.println(calender.getTime().toString());
       
       int month=cal.get(Calender.YEAR); //月を取得
       int date=cal.get(Calender.MONTH); //日にちを取得
-      //return文どうすればいい？
       
-      if(month==1){//月間画面を白紙に戻す？};
-      
-      if(date==1){//愚痴カウンターを0にする}else{
-      
-      //愚痴カウンターを1増やす};
-      
-      /*
-      つぶやく画面を表示するコード
-      */
- }
+      return month;
+    }
+    
+    
+    public 
+}
