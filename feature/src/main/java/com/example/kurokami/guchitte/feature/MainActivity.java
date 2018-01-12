@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
         //インスタンス生成
         int gruCounter;//愚痴カウンタ、保存される必要あり
-        int month=monthChecker.getterCalender();//今月が何月なのか取得、毎回取得保存する必要なし。適当な名前なのであとで直す
+        int month=monthCheck.getCalender();//今月が何月なのか取得、毎回取得保存する必要なし。適当な名前なのであとで直す
 
         Gson gson = new Gson();
         //ファイル(data)から各月のデータを取得してリストを作成する
